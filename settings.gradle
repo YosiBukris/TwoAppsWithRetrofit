@@ -1,3 +1,4 @@
+include ':commonApp'
 include ':customerapp'
 include ':app'
 rootProject.name = "Module"
