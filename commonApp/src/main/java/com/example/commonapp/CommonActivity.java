@@ -18,6 +18,7 @@ public abstract class CommonActivity extends AppCompatActivity {
     private long startTimeStamp = 0;
     private ScreenTimeManager screenTimeManager;
     public static int BG_COLOR = Color.WHITE;
+    public static String APP_NAME = "";
     private TextView main_LBL_title, main_LBL_isOpen, main_LBL_adress, main_LBL_cars, main_LBL_time;
 
     @SuppressLint("ResourceAsColor")
@@ -63,7 +64,7 @@ public abstract class CommonActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         long duration = (System.currentTimeMillis() - startTimeStamp) / 1000;
-        screenTimeManager.saveScreenTime(duration, "temp");
+        screenTimeManager.saveScreenTime(duration, APP_NAME);
     }
 
     private void downloadGarage(CommonActivity.CallBack_OnGarageDownloaded callBack) {
@@ -77,7 +78,7 @@ public abstract class CommonActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                screenTimeManager.getInstance().getTotalScreenTime("temp", time -> runOnUiThread(() -> {
+                screenTimeManager.getInstance().getTotalScreenTime(APP_NAME, time -> runOnUiThread(() -> {
                     if (time >= 60) {
                         long minTime = time / 60;
                         long secTime = time % 60;

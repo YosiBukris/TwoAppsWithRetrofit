@@ -12,6 +12,7 @@ public class GarageActivity extends CommonActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         BG_COLOR = Color.BLUE;
+        APP_NAME = "GarageApp";
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_garage);
     }
