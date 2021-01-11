@@ -1,3 +1,4 @@
+include ':garageapp'
 include ':commonApp'
 include ':customerapp'
 include ':app'

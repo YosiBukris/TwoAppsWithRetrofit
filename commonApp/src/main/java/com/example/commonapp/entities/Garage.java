@@ -4,34 +4,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Garage {
-    private List<Car>allCars;
-    private boolean isOpen;
+    private String[] Cars;
+    private boolean open;
     private String address;
     private String name;
 
-    public Garage(){}
+    public Garage() {
+    }
 
-    public Garage( boolean isOpen, String address, String name) {
-       this.allCars = allCars;
-        this.isOpen = isOpen;
+    public Garage(boolean open, String address, String name, String[] Cars) {
+        this.Cars = Cars;
+        this.open = open;
         this.address = address;
         this.name = name;
     }
 
-    public List<Car> getAllCars() {
-        return allCars;
+    public String[] getCars() {
+        return Cars;
     }
 
-    public void setAllCars(ArrayList<Car> allCars) {
-        this.allCars = allCars;
+    public void setCars(String[] Cars) {
+        this.Cars = Cars;
     }
 
     public boolean isOpen() {
-        return isOpen;
+        return open;
     }
 
     public void setOpen(boolean open) {
-        isOpen = open;
+        open = open;
     }
 
     public String getAddress() {

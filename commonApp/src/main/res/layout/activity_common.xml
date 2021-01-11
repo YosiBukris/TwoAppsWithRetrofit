@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/main_common"
     android:layout_height="match_parent"
     tools:context=".CommonActivity">
 
@@ -10,29 +11,77 @@
         android:id="@+id/main_LBL_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/button"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="30dp"
         android:gravity="center_horizontal"
         android:text="Total Screen Time: "
         android:textAlignment="center"
         android:textSize="20dp"></TextView>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/main_LBL_time"
+        android:id="@+id/main_LINEAR_details"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Click To Get Data"
-        android:textSize="20dp" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/main_LBL_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/button"
+        <TextView
+            android:id="@+id/main_LBL_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:text="GARAGE NAME "
+            android:textSize="20dp"
+            android:gravity="center_horizontal"></TextView>
+
+        <TextView
+            android:id="@+id/main_LBL_isOpen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:text="GARAGE STATUS: "
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:gravity="center_horizontal"></TextView>
+
+        <TextView
+            android:id="@+id/main_LBL_adress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="ADDRES: "
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:gravity="center_horizontal"></TextView>
+
+        <TextView
+            android:id="@+id/main_LBL_cars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="Current Cars: "
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"></TextView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/main_IMG_fun"
+        android:layout_below="@+id/main_LINEAR_details"
+        android:layout_alignParentBottom="true"
+        android:layout_width="100dp"
         android:layout_centerInParent="true"
-        android:text="text"
-        android:textSize="20dp"></TextView>
+        android:src="@drawable/garage"
+        android:layout_height="100dp"></ImageView>
 
 </RelativeLayout>

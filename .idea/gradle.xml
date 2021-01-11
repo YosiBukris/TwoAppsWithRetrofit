@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/commonApp" />
             <option value="$PROJECT_DIR$/customerapp" />
+            <option value="$PROJECT_DIR$/garageapp" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
