@@ -1,9 +1,8 @@
-package com.example.module;
+package com.example.module.controllers;
 
+import com.example.module.entities.Garage;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -36,25 +35,6 @@ public class GarageController {
         }
     };
 
-//    Callback<Garage> garageCallBack = new Callback<Garage>() {
-//        @Override
-//        public void onResponse(Call<Garage> call, Response<Garage> response) {
-//            if (response.isSuccessful()) {
-//                Garage garage = response.body();
-//                if (callBack_garage != null) {
-//                    callBack_garage.garage(garage);
-//                }
-//            } else {
-//                System.out.println(response.errorBody());
-//            }
-//        }
-//
-//        @Override
-//        public void onFailure(Call<Garage> call, Throwable t) {
-//            t.printStackTrace();
-//        }
-//    };
-
     public void fetchAllGarage(CallBack_Garage callBack_garage) {
         this.callBack_garage = callBack_garage;
         Gson gson = new GsonBuilder()
@@ -70,27 +50,6 @@ public class GarageController {
 
         Call<Garage> call = garageAPI.loadGarage();
         call.enqueue(garageCallBack);
-    }
-
-//    public void fetchGarageByKey(String key, CallBack_Garage callBack_garage) {
-//        this.callBack_garage = callBack_garage;
-//        Gson gson = new GsonBuilder()
-//                .setLenient()
-//                .create();
-//
-//        Retrofit retrofit = new Retrofit.Builder()
-//                .baseUrl(BASE_URL)
-//                .addConverterFactory(GsonConverterFactory.create(gson))
-//                .build();
-//
-//        GarageAPI garagesAPI = retrofit.create(GarageAPI.class);
-//
-////        Call<Garage> call = garagesAPI.loadGarageByKey(key);
-////        call.enqueue(garageCallBack);
-//    }
-
-    public interface CallBack_Garages {
-        void garages(List<Garage> garages);
     }
 
     public interface CallBack_Garage {

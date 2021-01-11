@@ -1,4 +1,6 @@
-package com.example.module;
+package com.example.module.entities;
+
+import com.example.module.entities.Car;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.module;
+package com.example.module.entities;
 
 public class Car {
     private String name;
