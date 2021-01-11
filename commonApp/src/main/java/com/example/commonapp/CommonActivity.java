@@ -15,13 +15,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public abstract class CommonActivity extends AppCompatActivity {
-    private long startTimeStamp = 0;
-    private ScreenTimeManager screenTimeManager;
     public static int BG_COLOR = Color.WHITE;
     public static String APP_NAME = "";
+
+    private long startTimeStamp = 0;
+    private ScreenTimeManager screenTimeManager;
+
     private TextView main_LBL_title, main_LBL_isOpen, main_LBL_adress, main_LBL_cars, main_LBL_time;
 
-    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
